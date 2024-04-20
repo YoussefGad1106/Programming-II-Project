@@ -1,24 +1,88 @@
-# Programming-II-Project
+** E-Commerce System
 
-This project is a simple E-Commerce system that models different types of products and 
-their interactions with customers. The project consists of the following classes:
+This project implements a simple E-Commerce system that models different types of products and their interactions with customers.
 
-1-Product: This is the superclass that represents a generic product and contains the coomon details of the products
-  as the productId and the productName and also its price .
+**Classes
 
-2-ElectronicProduct: This is a subclass of Product that represents electronic products. and it also represents the brand of the product and the warranty period of it.
+1. Product Class
+   - Superclass representing a generic product.
+   - Attributes:
+     * productId: positive integer
+     * name: String
+     * price: positive float
+   - Methods: Setters and getters for the attributes.
 
-3-ClothingProduct: This is a subclass of Product that represents clothing products. and it shows the size of the product and also shows frm which fabric is the product made.
+2. ElectronicProduct Class
+   - Subclass of Product representing electronic products.
+   - Attributes:
+     * brand: String
+     * warrantyPeriod: positive integer
+   - Methods: Setters and getters for the attributes.
 
-4-BookProduct: This is a subclass of Product that represents book products. and demonstrates the author of the book and the publisher as well
+3. ClothingProduct Class
+   - Subclass of Product representing clothing products.
+   - Attributes:
+     * size: String
+     * fabric: String
+   - Methods: Setters and getters for the attributes.
 
-5-Customer: This class represents a customer and indicates its information such as : the id , the name and also the address.
+4. BookProduct Class
+   - Subclass of Product representing book products.
+   - Attributes:
+     * author: String
+     * publisher: String
+   - Methods: Setters and getters for the attributes.
 
-6-Cart: This class represents a shopping cart. and this class also contains the customerId to link it with the order and in this class we ask the user about the amount of the products will be entered into the cart and take this number to be the size of the object array whic in each index in it we assign an object which represent a product. and we also have methods to manipulate and deal with this array by adding new products to it or remove from it and we have a method called calculatePrice which calculates the sum of the prices of the products in the cart ( object array ) and finally we have got a function called placeOrder which shows the total price of the products in the cart and asks the user to whether confirm the order or cancel it and empty the cart.
+5. Customer Class
+   - Represents a customer.
+   - Attributes:
+     * customerId: positive integer
+     * name: String
+     * address: String
+   - Methods: Setters and getters for the attributes.
 
-7-Order: This class represents an order placed by a customer. this function has got 2 unique values which are the CustomerId and the OrderId as they are only specialized with this order and changes from one order to another and contains the object array of the products (cart) and also contains the total price of the products in the array and all of this are considered as the order information and the function of this class to print these information using PrintOrderInfo method.
+6. Cart Class
+   - Represents a shopping cart.
+   - Attributes:
+     * customerId: positive integer
+     * nProducts: positive integer
+     * products: an array of Product objects of size nProducts
+   - Methods: Setters and getters for the attributes, addProduct, removeProduct, calculatePrice, and placeOrder.
 
-8-8. EcommerceSystem: This class serves as the entry point for the project. It contains the main method 
-and demonstrates the usage of the other classes. in this class we Create an electronic producta , Create a clothing product and also  a book product then Create a customer data: (take it as input from the user) and then Create a shopping cart for the customer you created and ask them how many products they want to order and what they are and add them in the cart. and in the last step we Ask the user if they want to place an order for the products in the cart. and finally we print the order information.
+7. Order Class
+   - Represents an order placed by a customer.
+   - Attributes:
+     * customerId: positive integer
+     * orderId: positive integer
+     * products: an array of Product objects
+     * totalPrice: positive float
+   - Methods: printOrderInfo.
 
-and this how our Simple E-commerce System works !!
+8. EcommerceSystem Class
+   - Entry point for the project. Contains the main method and demonstrates the usage of other classes. Creates products and takes orders from the user.
+
+ **Test Case
+
+1. Create an electronic product with specifications provided.
+2. Create a clothing product with specifications provided.
+3. Create a book product with specifications provided.
+4. Create a customer with user's data.
+5. Create a shopping cart for the customer and add products.
+6. Ask the user if they want to place an order for the products in the cart.
+7. Print order info.
+
+Functionality:
+
+   1)Product Creation:
+Users can create different product types (Electronic, Clothing, Book) with specific attributes.
+Input validation ensures positive values for price, warranty period, and number of products.
+   2)Customer Creation:
+Users enter their details to create a customer object.
+   3)Shopping Cart Management:
+Customers can add and remove products from their cart.
+The system calculates the total price for all items in the cart.
+   4)Order Placement:
+Users confirm if they want to proceed with the order.
+If confirmed, an Order object is created with customer information, product details, and total price.
+   5)Order Information:
+The printOrderInfo method displays a summary of the placed order.
