@@ -73,16 +73,21 @@ This project implements a simple E-Commerce system that models different types o
 
 Functionality:
 
-   1)Product Creation:
-Users can create different product types (Electronic, Clothing, Book) with specific attributes.
-Input validation ensures positive values for price, warranty period, and number of products.
-   2)Customer Creation:
-Users enter their details to create a customer object.
-   3)Shopping Cart Management:
-Customers can add and remove products from their cart.
-The system calculates the total price for all items in the cart.
-   4)Order Placement:
-Users confirm if they want to proceed with the order.
-If confirmed, an Order object is created with customer information, product details, and total price.
-   5)Order Information:
-The printOrderInfo method displays a summary of the placed order.
+1)Product Creation:
+
+   Users can create different product types (Electronic, Clothing, Book) with specific attributes.
+   Input validation ensures positive values for price, warranty period, and number of products.
+2)Customer Creation:
+
+   Users enter their details to create a customer object.
+3)Shopping Cart Management:
+
+   Customers can add and remove products from their cart.
+   The system calculates the total price for all items in the cart.
+4)Order Placement:
+
+   Users confirm if they want to proceed with the order.
+   If confirmed, an Order object is created with customer information, product details, and total price.
+5)Order Information:
+
+   The printOrderInfo method displays a summary of the placed order.
